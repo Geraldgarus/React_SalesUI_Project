@@ -1,0 +1,36 @@
+/* src/components/ManagerDashboard.css */
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between boxes */
+    padding: 20px;
+  }
+  
+  .sales-box {
+    flex: 1 1 calc(25% - 20px); /* Responsive boxes */
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .sales-box h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .sales-box p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .daily-sales { background-color: #eaf4fc; }
+  .weekly-sales { background-color: #d9f8d7; }
+  .monthly-sales { background-color: #fff3d8; }
+  .yearly-sales { background-color: #fce4e4; }
+  

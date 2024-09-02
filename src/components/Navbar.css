@@ -1,0 +1,99 @@
+/* src/components/Navbar.css */
+.navbar {
+    height: 80px; /* Increased height */
+    background-color: rgba(0, 51, 102, 0.8); /* Blue with transparency */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixed position */
+    width: calc(100% - 250px); /* Adjust based on Sidebar width */
+    top: 0;
+    left: 200px; /* Adjust based on Sidebar width */
+    z-index: 1000; /* Ensure Navbar is above other content */
+    transition: width 0.3s; /* Smooth transition for resizing */
+}
+
+.navbar-content {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px; /* Adjust size as needed */
+    cursor: pointer;
+    margin-left: 20px; /* Add space to the left of the button */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position below the button */
+    background-color: #fff;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-icon {
+    vertical-align: middle;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%; /* Full width on small screens */
+        left: 0; /* Remove left positioning */
+    }
+
+    .navbar-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .navbar-right {
+        margin-top: 10px; /* Add margin to separate items */
+    }
+
+    .dropdown-content {
+        position: static; /* Static position for dropdown on mobile */
+        width: 100%; /* Full width dropdown */
+        top: auto; /* Reset top position */
+    }
+
+    .dropdown-button {
+        font-size: 20px; /* Smaller icon size for mobile */
+    }
+}

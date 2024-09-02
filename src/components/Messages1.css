@@ -1,0 +1,97 @@
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden; /* Hide horizontal overflow */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for the messages container */
+.messages-container {
+  max-width: 800px; /* Maximum width of the container */
+  width: 100%; /* Ensure the container takes full width of its parent */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  padding: 30px; /* Increased padding */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 0; /* Align container to the left */
+  margin-right: auto; /* Remove extra right margin */
+}
+
+/* Style for the messages box */
+.messages-box {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 15px; /* Increased padding */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Style for each message */
+.message {
+  padding: 15px; /* Increased padding */
+  margin-bottom: 15px; /* Increased margin */
+  border-radius: 4px;
+  background-color: #e9ecef;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Style for the message form */
+.message-form {
+  display: flex;
+  flex-direction: column; /* Default to column on smaller screens */
+}
+
+/* Style for the message input field */
+.message-form input {
+  width: 100%; /* Ensure input field takes full width */
+  padding: 15px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px; /* Increased font size */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  margin-bottom: 15px; /* Increased space between input and button */
+}
+
+/* Style for the send button */
+.message-form button {
+  padding: 15px 20px; /* Increased padding */
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  transition: background-color 0.3s ease;
+  width: 100%; /* Ensure button takes full width on smaller screens */
+}
+
+/* Hover effect for the send button */
+.message-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 600px) {
+  .message-form {
+      flex-direction: row; /* Row layout for larger screens */
+  }
+
+  .message-form input {
+      margin-right: 10px; /* Space between input and button */
+      flex: 1; /* Allow input to take more space */
+  }
+
+  .message-form button {
+      width: auto; /* Button width adapts to content */
+  }
+}
+
+/* Additional mobile responsiveness */
+@media (max-width: 599px) {
+  .messages-container {
+      padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
